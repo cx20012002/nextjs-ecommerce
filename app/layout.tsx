@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import CartProvider from './components/Providers';
 import { ShoppingCartModal } from './components/ShoppingCartModal';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
+          <SpeedInsights />
           <Navbar />
           <ShoppingCartModal />
           {children}
